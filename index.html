@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ToDo List</title>
+	</head>
+	<body>
+        <style>
+            body{
+                background-color: #06112e;
+            }
+            #header{
+                text-align: center;
+                vertical-align: middle;
+                padding-top: 5%;
+                color:#00f024
+            }
+            #center{
+                text-align: center;
+                position: relative;
+                vertical-align: middle;
+                padding-top: 3%;
+            }
+
+            .B-e{
+                padding-top: 7px;
+            }
+            #I-w_td{
+                border: 2px solid grey;
+                border-radius:20px;
+                width:40%;
+                background-color: #032e0a;
+                color:#00f024;
+                cursor:text;
+            }
+            input[type="text"] {
+                text-align:center;
+                color:#00f024;
+            }
+            ::placeholder{
+                color:#00f024;
+            }
+            #B-e{
+                border:2px solid #00f024;
+                border-radius: 20px;
+                background-color: #00f024;
+                color:white;
+                font-weight:bold;
+            }
+        </style>
+        <div id="header">
+            <h1>To Do List</h1>
+        </div>
+        <div id="center">
+            <div class="I-w_td"><input type="text" placeholder="Write here what you want to do" id="I-w_td"/></div>
+            <div class="B-e"><button id="B-e" onclick="submit()">Enter</button></div>
+        </div>
+        <p></p>
+        <script type="application/javascript">
+            function submit(){
+                var d= document.createElement("DIV");
+                d.innerHTML=document.getElementById("I-w_td").value;
+                d.style.cssText='text-align:center; color:#00f024;text-transform:capitalize;padding-top:1%';
+                document.body.appendChild(d);
+                document.getElementById("I-w_td").value="";
+            }
+        </script>
+	</body>
+</html>
